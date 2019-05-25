@@ -1,0 +1,100 @@
+<div class="container">
+  <fieldset>
+    <legend>Marcar Consultas</legend>
+    <form ng-submit="marcarConsulta()">
+      <div class="col-md-4 form-line">
+
+        <!--campo paciente-->
+        <div class="form-group">
+          <label for="exampleInputUsername">Paciente</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Click na lupa para adicionar -->" disabled="true" value="{{campoPaciente.nome}}">
+              <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="listarPacientes()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+            </div>
+          </div>
+        </div>
+
+        <!--campo medico-->
+        <div class="form-group">
+          <label for="exampleInputEmail">Medico</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Click na lupa para adicionar -->" disabled="true" value="{{campoMedico.nome}}">
+              <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="listaMedico()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+            </div>
+          </div>
+        </div>
+
+        <!--campo data-->
+        <div class="form-group">
+          <label for="telephone">Data</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Click no calendario -->" disabled="true" value="{{campoConsulta.data | date:'dd/MM/yyyy HH:mm'}}">
+              <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="listarData(campoMedico._id)">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Agendar <span class="fa fa-calendar-check-o"></span></button>
+      </div>
+
+      <!--tabela de busca lista os cadastros medico e paciente-->
+      <div class="col-md-5">
+        <div class="form-group  ">
+          <label for="description">{{menuLegenda}}</label>
+          <input type="text" class="form-control" placeholder="Procurar..." ng-model="busca">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>{{tabela1}}</th>
+                <th>{{tabela2}}</th>
+                <th>{{tabela3}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="paciente in listPacientes | orderBy: '-name' | filter: busca">
+                <td>{{paciente.nome}}</td>
+                <td>{{paciente.sobrenome}}</td>
+                <td>{{paciente.cartaosus}}</td>
+                <td><a ng-click="adicionarPaciente(paciente)"><i class="fa fa-plus"></i></a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr ng-repeat="medico in listMedico | orderBy: '-name' | filter: busca">
+                <td>{{medico.nome}}</td>
+                <td>{{medico.sobrenome}}</td>
+                <td>{{medico.especialidade}}</td>
+                <td><a ng-click="adicionarMedico(medico)"><i class="fa fa-plus"></i></a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr ng-repeat="consulta in listConsulta | orderBy: '-date' | filter: busca">
+                <td>{{consulta.data | date:"dd/MM/yyyy"}}</td>
+                <td >{{consulta.quantidade - consulta.marcadas}}</td>
+                <td>{{consulta.data | date:"HH:mm"}}</td>
+                <td><a ng-click="adionarData(consulta)"><i class="fa fa-plus"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+        </div>
+
+      </div>
+    </form>
+  </fieldset>
+</div>

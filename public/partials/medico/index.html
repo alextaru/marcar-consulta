@@ -1,0 +1,49 @@
+<div>
+  <fieldset>
+
+    <legend>Pesquisa de Medicos</legend>
+
+    <div class="row">
+      <!-- campo de busca-->
+      <div class="sidebar-search col-md-6">
+        <div class="input-group custom-search-form">
+          <input type="text" class="form-control" placeholder="Procurar..." ng-model="busca">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+        </div>
+      </div>
+        <div class="col-md-5">
+          <a href="/#!/cadmedico">
+            <button class="btn btn-warning">Cadastrar Medico <span class="fa fa-plus"></span></button>
+          </a>
+        </div>
+    </div>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Especialização</th>
+            <th>CRM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="medico in listMedicos | orderBy: '-name' | filter: busca">
+            <td>{{medico.nome}}</td>
+            <td>{{medico.sobrenome}}</td>
+            <td>{{medico.especialidade}}</td>
+            <td>{{medico.crm}}</td>
+            <td>
+              <a href="/#!/medico/{{medico._id}}"><i class="fa fa-search"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </fieldset>
+</div>

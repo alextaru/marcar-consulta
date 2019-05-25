@@ -1,0 +1,40 @@
+<div>
+  <fieldset>
+
+    <legend>Confirmação de Consultas</legend>
+
+    <div class="row">
+      <!-- campo de busca-->
+      <div class="sidebar-search col-md-6">
+        <div class="input-group custom-search-form">
+          <input type="text" class="form-control" placeholder="Procurar..." ng-model="busca">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Medico</th>
+            <th>data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="consulta in listConsultas | orderBy: '-name' | filter: busca">
+            <td>{{consulta.paciente_nome}}</td>
+            <td>{{consulta.medico_nome}}</td>
+            <td>{{consulta.data | date:"dd/MM/yyyy HH:mm"}}</td>
+            <td><a ng-click="confirmar(consulta._id)"><i class="fa fa-check-square-o"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </fieldset>
+</div>

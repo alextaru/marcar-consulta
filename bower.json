@@ -1,0 +1,38 @@
+{
+  "name": "gerenciamento_consultas",
+  "authors": [
+    "Alexandre Goncalves <alex.taru@yahoo.com.br>"
+  ],
+  "description": "sistema de gerenciamento de marcacao de consultas",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "datatables": "^1.10.4",
+    "datatables-plugins": "^1.0.1",
+    "flot": "^0.8.3",
+    "font-awesome": "^4.6.3",
+    "holderjs": "^2.4.1",
+    "metisMenu": "^1.1.3",
+    "morrisjs": "^0.5.1",
+    "datatables-responsive": "^1.0.6",
+    "bootstrap-social": "^4.8.0",
+    "flot.tooltip": "^0.8.4",
+    "angular-route": "^1.6.6",
+    "angular": "^1.6.6",
+    "angular-resource": "^1.6.6",
+    "socket.io": "^2.0.4"
+  },
+  "resolutions": {
+    "font-awesome": "^4.6.3"
+  }
+}

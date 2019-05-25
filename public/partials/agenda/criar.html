@@ -1,0 +1,125 @@
+<div class="container">
+  <fieldset>
+    <legend>Criar Agenda Medica</legend>
+    <form ng-submit="criarAgenda(agenda)">
+      <div class="col-md-4 form-line">
+
+        <!--campo medico-->
+        <div class="form-group">
+          <label for="exampleInputEmail">Medico</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Click na lupa para adicionar -->" disabled="true" value="{{campoMedico.nome}}" required>
+              <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="listaMedico()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+            </div>
+          </div>
+        </div>
+
+        <!--campo data-->
+        <div class="form-group">
+          <label for="telephone">Data da Consulta</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="date" ng-model="agenda.data" class="form-control" required>
+              <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      <i class="fa fa-calendar"></i>
+                  </button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--campo repetir-->
+        <div class="form-group">
+          <label for="exampleInputEmail">
+            <input type="checkbox" name="repetir" value="true" ng-model="repetir"/> Repetir consulta
+          </label>
+        </div>
+
+        <!--campo quantidade de repeticoes-->
+        <div class="form-group" ng-show="repetir">
+          <label for="telephone">Quantidade de repeticoes</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="number" placeholder="ex: 7" class="form-control">
+              <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-list-ol"></i>
+                    </button>
+                </span>
+            </div>
+          </div>
+        </div>
+
+        <!--campo periodo-->
+        <div class="form-group">
+          <label for="telephone">Horario da Consulta</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <select ng-model="agenda.horario" class="form-control selectpicker" required>
+              <option value="">Selecione o horario</option>
+              <option value="07:00">07:00 as 12:00</option>
+              <option value="13:00">13:00 as 18:00</option>
+            </select>
+              <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                    <i class="fa fa-sun-o"></i>
+                  </button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--campo quantidade de consultas-->
+        <div class="form-group">
+          <label for="telephone">Quantidade de Consultas</label>
+          <div class="sidebar-search col-md-14">
+            <div class="input-group custom-search-form">
+              <input type="number" ng-model="agenda.quantidade" placeholder="ex: 20" class="form-control" required>
+              <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-list-ol"></i>
+                    </button>
+                </span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Agendar <span class="fa fa-calendar-check-o"></span></button>
+      </div>
+
+      <!--tabela de busca lista os cadastros medico e paciente-->
+      <div class="col-md-5">
+        <div class="form-group  ">
+          <label for="description">{{menuLegenda}}</label>
+          <input type="text" class="form-control" placeholder="Procurar..." ng-model="busca">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>{{tabela1}}</th>
+                <th>{{tabela2}}</th>
+                <th>{{tabela3}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="medico in listMedico | orderBy: '-name' | filter: busca">
+                <td>{{medico.nome}}</td>
+                <td>{{medico.sobrenome}}</td>
+                <td>{{medico.especializacao}}</td>
+                <td><a ng-click="adicionarMedico(medico)"><i class="fa fa-plus"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+        </div>
+
+      </div>
+    </form>
+  </fieldset>
+</div>

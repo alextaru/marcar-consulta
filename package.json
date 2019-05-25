@@ -1,0 +1,31 @@
+ {
+  "name": "gerenciamento_consultas",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./app"
+  },
+  "description": "sistema de controle de marcacao de consultas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://alextaru@bitbucket.org/alextaru/gerenciamento-de-consultas.git"
+  },
+  "author": "x1 solucoes",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/alextaru/gerenciamento-de-consultas#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-load": "^1.1.16",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0",
+    "npm": "^5.6.0",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4"
+  }
+}

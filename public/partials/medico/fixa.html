@@ -1,0 +1,143 @@
+<div class="container col-md-12">
+  <!-- Form  cadastro de paciente-->
+  <form class="well form-horizontal" id="contact_form">
+    <fieldset>
+
+
+      <legend>Fixa de Medico</legend>
+
+      <!-- campo nome-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Primeiro Nome</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="nome" class="form-control" type="text" value="{{medico.nome}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo sobrenome-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Sobre Nome</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="sobrenome" class="form-control" type="text" value="{{medico.sobrenome}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo data nascimento-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Data de Nascimento</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="dataNascimento" class="form-control" type="text" value="{{medico.dataNascimento | date:'dd/MM/yyyy'}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo telefone-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Telefone</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="telefone" class="form-control" type="text" value="{{medico.telefone}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo email-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-mail</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-at"></i></span>
+            <input name="email"  class="form-control" type="text" value="{{medico.email}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo Estado -->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Estado</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-at"></i></span>
+            <input name="estado" class="form-control" type="text" value="{{medico.estado}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo cidade-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Cidade</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-at"></i></span>
+            <input name="cidade" class="form-control" type="text" value="{{medico.cidade}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo endereco-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Endereço</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="endereco" class="form-control" type="text" value="{{medico.endereco}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- compo numero sus-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Numeror CRM</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+            <input name="crm" class="form-control" type="text" value="{{medico.crm}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo Estado crm-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Estado CRM</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+            <input name="estadoCrm" class="form-control" type="text" value="{{medico.estadoCrm}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo especialidade-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Especialização</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="especialidade" class="form-control" type="text" value="{{medico.especialidade}}" disabled>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-5">
+          <button class="btn btn-warning">Editar <span class="glyphicon glyphicon-send"></span></button>
+          <a href="/#!/medico">
+            <button class="btn btn-secondary">Voltar <span class="fa fa-backward"></span></button>
+          </a>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="consultas">
+
+<head>
+
+  <meta http-equiv="Content-Language" content="pt-br">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Gerenciamento de Consultas</title>
+
+  <!-- css bibliotecas do tema-->
+  <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="libs/metisMenu/dist/metisMenu.min.css" rel="stylesheet" />
+  <link href="libs/morrisjs/morris.css" rel="stylesheet" />
+  <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- css do tema-->
+  <link href="css/sb-admin-2.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <!-- navegacao -->
+    <ng-include src="'partials/\menu.html'"></ng-include>
+
+    <!-- paginas views-->
+    <div id="page-wrapper">
+      <main ng-view>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- angular-->
+  <script src="libs\angular\angular.js"></script>
+  <script src="libs\angular-route\angular-route.js"></script>
+  <script src="libs\angular-resource\angular-resource.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- socket io-->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- bibliotecas do tema-->
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="libs/metisMenu/dist/metisMenu.min.js"></script>
+  <script src="libs/raphael/raphael.min.js"></script>
+  <script src="libs/morrisjs/morris.min.js"></script>
+  <script src="libs/morrisjs/morris.min.js"></script>
+
+  <!--JavaScript do layout-->
+  <script src="js/layout/sb-admin-2.js"></script>
+
+
+</body>
+
+</html>

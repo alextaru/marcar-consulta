@@ -1,0 +1,49 @@
+<div>
+  <fieldset>
+
+    <legend>Pesquisa de Paciente</legend>
+
+    <div class="row">
+      <!-- campo de busca-->
+      <div class="sidebar-search col-md-6">
+        <div class="input-group custom-search-form">
+          <input type="text" class="form-control" placeholder="Procurar..." ng-model="busca">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+        </div>
+      </div>
+        <div class="col-md-5">
+          <a href="/#!/cadpaciente">
+            <button class="btn btn-warning">Cadastrar Paciente <span class="fa fa-plus"></span></button>
+          </a>
+        </div>
+    </div>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Cartão SUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="paciente in listPacientes | orderBy: '-name' | filter: busca">
+            <td>{{paciente.nome}}</td>
+            <td>{{paciente.sobrenome}}</td>
+            <td>{{paciente.cartaosus}}</td>
+            <td>
+              <a href="/#!/fixa/{{paciente._id}}"><i class="fa fa-search"></i></a>
+              <a href=""><i class="fa fa-newspaper-o fa-fw"></i></a>
+              <a href=""><i class="fa fa-stethoscope fa-fw"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </fieldset>
+</div>

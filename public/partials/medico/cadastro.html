@@ -1,0 +1,182 @@
+<div class="container col-md-12">
+  <!-- Form  cadastro de paciente-->
+  <form ng-submit="adicinonarMedico(medico)" class="well form-horizontal" id="contact_form">
+    <fieldset>
+
+
+      <legend>Cadastro de Medicos</legend>
+
+      <!-- campo nome-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Primeiro Nome</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="nome" placeholder="Ex: alexandre" class="form-control" type="text" ng-model="medico.nome" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo sobrenome-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Sobre Nome</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="sobrenome" placeholder="Ex: goncalves ferreira" class="form-control" type="text" ng-model="medico.sobrenome" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo data nascimento-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Data de Nascimento</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <input name="dataNascimento" class="form-control" type="Date" ng-model="medico.dataNascimento" required>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- campo telefone-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Telefone</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="telefone" placeholder="Ex: (31)98572-1212" class="form-control" type="number" ng-model="medico.telefone" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo email-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-mail</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-at"></i></span>
+            <input name="email" placeholder="Ex: alexandre@gmail.com" class="form-control" type="email" ng-model="medico.email">
+          </div>
+        </div>
+      </div>
+
+      <!-- campo Estado -->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Estado</label>
+        <div class="col-md-5 selectContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="estado" class="form-control selectpicker" ng-model="medico.estado" required>
+            <option value="" selected>Selecione o estado</option>
+            <option value="mato gosso">Mato Grosso</option>
+            <option value="mato grosso do sul">Mato Grosso do Sul</option>
+            <option value="minas gerais">Minas Gerais</option>
+            <option value="pará">Pará</option>
+            <option value="paraíba">Paraíba</option>
+            <option value="paraná">Paraná</option>
+
+          </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo cidade-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Cidade</label>
+        <div class="col-md-5 selectContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="cidade" class="form-control selectpicker" ng-model="medico.cidade" required>
+            <option value="" selected>Selecione a cidade</option>
+            <option value="ipatinga">Ipatinga</option>
+            <option value="coronel Fabriciano">Coronel Fabriciano</option>
+            <option value="timoteo">Timoteo</option>
+            <option value="iapu">Iapu</option>
+            <option value="bugre">Bucre</option>
+            <option value="santana do paraiso">Santana do Paraiso</option>
+            <option value="inhapim">Inhapim</option>
+            <option value="sao joao do oriente">São João do oriente</option>
+          </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo bairro-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Bairro</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="bairro" placeholder="Ex: ideal" class="form-control" type="text" ng-model="medico.bairro" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo endereco-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Endereço</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="endereco" placeholder="Ex: rua raul pompeia, 245" class="form-control" type="text" ng-model="medico.endereco" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- compo numero sus-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Numeror CRM</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+            <input name="crm" placeholder="Ex: 25485" class="form-control" type="number" ng-model="medico.crm" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo Estado crm-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Estado CRM</label>
+        <div class="col-md-5 selectContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="estadoCrm" class="form-control selectpicker" ng-model="medico.estadoCrm" required>
+            <option value="" selected>Selecione o estado</option>
+            <option value="mato gosso">Mato Grosso</option>
+            <option value="mato grosso do sul">Mato Grosso do Sul</option>
+            <option value="minas gerais">Minas Gerais</option>
+            <option value="pará">Pará</option>
+            <option value="paraíba">Paraíba</option>
+            <option value="paraná">Paraná</option>
+          </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- campo especialidade-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Especialização</label>
+        <div class="col-md-5 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="especialidade" placeholder="Ex: pediatra" class="form-control" type="text" ng-model="medico.especialidade" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-5">
+          <button type="submit" class="btn btn-warning">Cadastrar <span class="glyphicon glyphicon-send"></span></button>
+          <a href="/#!/medico">
+            <button class="btn btn-danger">Cancelar <span class="fa fa-times"></span></button>
+          </a>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>

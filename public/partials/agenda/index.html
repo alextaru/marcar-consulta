@@ -1,0 +1,41 @@
+<div>
+  <fieldset>
+
+    <legend>Agenda de Consultas</legend>
+
+    <div class="sidebar-search col-md-5">
+      <div class="input-group custom-search-form">
+        <input type="text" class="form-control" placeholder="Procurar..." ng-model="busca">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+              <i class="fa fa-search"></i>
+          </button>
+      </span>
+      </div>
+    </div>
+    <div class="col-md-4 selectContainer">
+      <a href="/#!/criar"><button class="btn btn-warning">Criar Agenda <span class="fa fa-calendar-plus-o"></span></button></a>
+    </div>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Medico</th>
+            <th>Consultas</th>
+            <th>Periodo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="agenda in listaAgenda | orderBy: '-data' | filter: busca">
+            <td>{{agenda.data | date:"dd/MM/yyyy"}}</td>
+            <td>{{agenda.nome_medico}}</td>
+            <td>{{agenda.quantidade}}</td>
+            <td>{{agenda.data | date:"HH:mm"}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </fieldset>
+</div>
