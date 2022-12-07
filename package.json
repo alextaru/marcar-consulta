@@ -14,11 +14,11 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/alextaru/gerenciamento-de-consultas#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
     "ejs": "^2.5.7",
-    "express": "^4.16.2",
+    "express": "^4.18.2",
     "express-load": "^1.1.16",
     "moment": "^2.20.1",
     "moment-timezone": "^0.5.14",
