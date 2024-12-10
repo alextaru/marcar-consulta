@@ -15,10 +15,10 @@
   "homepage": "https://bitbucket.org/alextaru/gerenciamento-de-consultas#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
+    "cookie-parser": "^1.4.7",
     "debug": "^3.1.0",
     "ejs": "^2.5.7",
-    "express": "^4.17.3",
+    "express": "^4.21.2",
     "express-load": "^1.1.16",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.14",
@@ -26,6 +26,6 @@
     "morgan": "^1.9.0",
     "npm": "^6.14.6",
     "request": "^2.83.0",
-    "socket.io": "^2.5.0"
+    "socket.io": "^4.8.1"
   }
 }
